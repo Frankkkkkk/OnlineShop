@@ -1,0 +1,23 @@
+﻿@model NewAssign2.Models.ApplicationUser
+@{
+    ViewBag.Title = "My Details";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        @Html.Partial("_UserDetailsPartial", Model)
+        <dt>
+            Password
+        </dt>
+        <dd>
+            @Html.ActionLink("Change your Password", "Change Password")
+        </dd>
+    </dl>
+</div>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
+</p>
